@@ -1,0 +1,10 @@
+*.pyc
+*.egg/
+*.egg-info/
+.coverage
+coverage.xml
+pep8.txt
+.eggs/
+dist/
+build/
+.tox
