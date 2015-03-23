@@ -30,6 +30,22 @@ Then add it to your ``INSTALLED_APPS``::
     )
 
 
+Settings
+--------
+
+The protocol of the uris returned by this library defaults to ``http``.  You
+can specify the protocol with the ``ABSOLUTEURI_PROTOCOL`` setting.
+
+.. code:: python
+
+    # settings.py
+    ABSOLUTEURI_PROTOCOL = 'https'
+
+    # Elsewhere
+    >>> absoluteuri.build_absolute_uri('/some/path/')
+    'https://example.com/some/path/'
+
+
 Template Tags
 -------------
 
