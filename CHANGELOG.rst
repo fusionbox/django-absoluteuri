@@ -6,10 +6,11 @@ Changelog
 1.1.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added ABSOLUTEURI_PROTOCOL settings. [#1]
+- Documented sites framework requirement.
 
 
 1.0.0 (2015-03-17)
 ------------------
 
-* First release on PyPI.
+- First release on PyPI.
