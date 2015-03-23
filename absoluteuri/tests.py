@@ -2,6 +2,8 @@ from django.test import TestCase
 from django.template import Template, Context
 from django.conf.urls import url
 
+import absoluteuri
+
 
 def view(request, *args, **kwargs):
     pass
@@ -36,3 +38,17 @@ class AbsoluteURITestCase(TestCase):
         template = "{% load absoluteuri %}{% absolutize path %}"
         rendered = self.render_template(template, path='/url/path/')
         self.assertEqual(rendered, 'http://example.com/url/path/')
+
+    def test_protocol_with_setting_not_set(self):
+        uri = absoluteuri.build_absolute_uri('/url/path/')
+        self.assertEqual(uri, 'http://example.com/url/path/')
+
+    def test_protocol_with_setting_not_set_as_http(self):
+        with self.settings(ABSOLUTEURI_PROTOCOL='http'):
+            uri = absoluteuri.build_absolute_uri('/url/path/')
+            self.assertEqual(uri, 'http://example.com/url/path/')
+
+    def test_protocol_with_setting_not_set_as_https(self):
+        with self.settings(ABSOLUTEURI_PROTOCOL='https'):
+            uri = absoluteuri.build_absolute_uri('/url/path/')
+            self.assertEqual(uri, 'https://example.com/url/path/')
