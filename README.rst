@@ -26,8 +26,13 @@ Then add it to your ``INSTALLED_APPS``::
 
     INSTALLED_APPS = (
         # ...
+        'django.contrib.sites',
         'absoluteuri',
     )
+
+django-absoluteuri requires the `Sites Framework
+<https://docs.djangoproject.com/en/dev/ref/contrib/sites/>`_ to be in
+``INSTALLED_APPS`` well and configured as well.
 
 
 Settings
