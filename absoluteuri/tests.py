@@ -1,3 +1,5 @@
+import warnings
+
 from django.test import TestCase
 from django.template import Template, Context
 from django.conf.urls import url
@@ -35,9 +37,14 @@ class AbsoluteURITestCase(TestCase):
         self.assertEqual(rendered3, 'http://example.com/foo/12/')
 
     def test_absolutize_tag(self):
-        template = "{% load absoluteuri %}{% absolutize path %}"
-        rendered = self.render_template(template, path='/url/path/')
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+
+            template = "{% load absoluteuri %}{% absolutize path %}"
+            rendered = self.render_template(template, path='/url/path/')
+
         self.assertEqual(rendered, 'http://example.com/url/path/')
+        self.assertTrue(issubclass(w[-1].category, DeprecationWarning))
 
     def test_protocol_with_setting_not_set(self):
         uri = absoluteuri.build_absolute_uri('/url/path/')
