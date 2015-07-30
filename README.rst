@@ -74,6 +74,27 @@ URLs.
     <a href="{% absolutize url_from_context %}">click here</a>
 
 
+Filter
+------
+
+Sometimes instead of template tags, it's easier to use filters. You can do that
+as well.
+
+.. code:: html+django
+
+   {% load absoluteuri %}
+
+   <a href="{{ my_object.get_absolute_url|absolutize }}">click here</a>
+
+But there are situations where tag can not be used but filter can.
+
+.. code:: html+django
+
+   {% load absoluteuri %}
+
+   {% include "some-other-template.html" with url=my_object.get_absolute_url|absolutize %}
+
+
 Functions
 ---------
 

@@ -14,3 +14,4 @@ def do_absoluteuri(view_name, *args, **kwargs):
 
 
 register.simple_tag(name='absolutize')(absoluteuri.build_absolute_uri)
+register.filter(name='absolutize')(absoluteuri.build_absolute_uri)
