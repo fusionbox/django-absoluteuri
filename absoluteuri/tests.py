@@ -52,3 +52,9 @@ class AbsoluteURITestCase(TestCase):
         with self.settings(ABSOLUTEURI_PROTOCOL='https'):
             uri = absoluteuri.build_absolute_uri('/url/path/')
             self.assertEqual(uri, 'https://example.com/url/path/')
+
+    def test_absolutize_filter(self):
+        template = "{% load absoluteuri %}" + \
+                   "{% with url='/foo/' %}{{ url|absolutize }}{% endwith %}"
+        rendered = self.render_template(template)
+        self.assertEqual(rendered, "http://example.com/foo/")
