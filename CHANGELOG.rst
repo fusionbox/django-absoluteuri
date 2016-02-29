@@ -3,7 +3,7 @@
 Changelog
 =========
 
-1.2.0 (unreleased)
+1.2.0 (2016-02-29)
 ------------------
 
 - Add absolutize filter. This deprecates the absolutize tag. [#4]
