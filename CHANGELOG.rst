@@ -6,7 +6,7 @@ Changelog
 1.2.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add absolutize filter. This deprecates the absolutize tag. [#4]
 
 
 1.1.0 (2015-03-23)
