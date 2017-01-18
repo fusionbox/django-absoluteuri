@@ -3,6 +3,11 @@
 Changelog
 =========
 
+1.3.0 (unreleased)
+------------------
+
+- Ability to generate URIs on a certain Site.
+
 1.2.1 (unreleased)
 ------------------
 

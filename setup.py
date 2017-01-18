@@ -13,13 +13,14 @@ changelog = read('CHANGELOG.rst')
 
 setup(
     name='django-absoluteuri',
-    version='1.2.1.dev0',
+    version='1.3.0.dev0',
     description=__doc__,
     long_description=readme + '\n\n' + changelog,
     author='Fusionbox, Inc.',
     author_email='programmers@fusionbox.com',
     url='https://github.com/fusionbox/django-absoluteuri',
-    packages=[package for package in find_packages() if package.startswith('absoluteuri')],
+    packages=[package for package in find_packages()
+              if package.startswith('absoluteuri')],
     install_requires=[
         'Django>=1.4',
     ],

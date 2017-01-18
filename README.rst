@@ -111,3 +111,19 @@ There are also two functions that django-absoluteuri provides,
     'http://example.com/path/to/somewhere/'
     >>> absoluteuri.reverse('viewname', kwargs={'foo': 'bar'})
     'http://example.com/path/to/bar/'
+
+In addition to those ``build_absolute_uri_on_site`` and ``reverse_on_site``
+may help you generate absolute links for another Django site:
+
+.. code:: python
+
+    >>> from django.contrib.sites.models import Site
+
+    >>> site = Site.objects.get(domain='example2.com')
+    >>> absoluteuri.build_absolute_uri_on_site(site, my_relative_path)
+    'http://example2.com/path/to/somewhere/'
+    >>> absoluteuri.reverse_on_site(site, 'viewname', kwargs={'foo': 'bar'})
+    'http://example2.com/path/to/bar/'
+
+It might be helpful if you have multiple servers and want to generate a link
+for a specific one.
