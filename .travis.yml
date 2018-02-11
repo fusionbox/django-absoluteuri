@@ -9,6 +9,7 @@ env:
   - TOX_ENV=py26-dj14
   - TOX_ENV=py27-dj17
   - TOX_ENV=py33-dj17
+  - TOX_ENV=py36-dj20
 install:
   - pip install --upgrade pip
   - pip install tox==1.8.0

@@ -1,7 +1,13 @@
 import pkg_resources
 
-from django.core import urlresolvers
 from django.conf import settings
+
+try:
+    # Will be removed in Django 2.0
+    from django.core import urlresolvers
+except ImportError:
+    import django.urls as urlresolvers
+
 
 __version__ = pkg_resources.get_distribution('django-absoluteuri').version
 
