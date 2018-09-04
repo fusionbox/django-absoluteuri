@@ -15,3 +15,10 @@ DATABASES = {
 SITE_ID = 1
 
 ROOT_URLCONF = 'absoluteuri.tests'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+    },
+]

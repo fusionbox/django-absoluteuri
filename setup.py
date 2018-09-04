@@ -21,7 +21,7 @@ setup(
     url='https://github.com/fusionbox/django-absoluteuri',
     packages=[package for package in find_packages() if package.startswith('absoluteuri')],
     install_requires=[
-        'Django>=1.4',
+        'Django>=1.11',
     ],
     test_suite='setuptest.setuptest.SetupTestSuite',
     tests_require=[

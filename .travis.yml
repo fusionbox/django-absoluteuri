@@ -1,17 +1,18 @@
 sudo: false
 language: python
 python:
-  - "2.7"
+  - "3.6"
 cache:
   directories:
     - $HOME/.pip-cache/
 env:
-  - TOX_ENV=py26-dj14
-  - TOX_ENV=py27-dj17
-  - TOX_ENV=py33-dj17
+  - TOX_ENV=py27-dj111
+  - TOX_ENV=py36-dj111
+  - TOX_ENV=py36-dj20
+  - TOX_ENV=py36-dj21
 install:
   - pip install --upgrade pip
-  - pip install tox==1.8.0
+  - pip install tox>=1.8.0
 script:
   - tox -e $TOX_ENV
 after_script:
