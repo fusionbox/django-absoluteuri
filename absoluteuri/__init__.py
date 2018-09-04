@@ -1,6 +1,6 @@
 import pkg_resources
 
-from django.core import urlresolvers
+from django import urls
 from django.conf import settings
 
 __version__ = pkg_resources.get_distribution('django-absoluteuri').version
@@ -19,5 +19,5 @@ def build_absolute_uri(path):
 
 def reverse(*args, **kwargs):
     """Reverse a URL and make it absolute."""
-    path = urlresolvers.reverse(*args, **kwargs)
+    path = urls.reverse(*args, **kwargs)
     return build_absolute_uri(path)
