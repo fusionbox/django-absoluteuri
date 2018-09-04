@@ -13,7 +13,7 @@ changelog = read('CHANGELOG.rst')
 
 setup(
     name='django-absoluteuri',
-    version='1.2.1.dev0',
+    version='1.3.0',
     description=__doc__,
     long_description=readme + '\n\n' + changelog,
     author='Fusionbox, Inc.',
