@@ -22,7 +22,9 @@ Install django-absoluteuri::
 
     pip install django-absoluteuri
 
-Then add it to your ``INSTALLED_APPS``::
+Then add it to your ``INSTALLED_APPS``:
+
+.. code:: python
 
     INSTALLED_APPS = (
         # ...
