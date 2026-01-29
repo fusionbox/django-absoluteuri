@@ -2,7 +2,7 @@ import warnings
 
 from django.test import TestCase
 from django.template import Template, Context
-from django.conf.urls import url
+from django.urls import re_path
 
 import absoluteuri
 
@@ -12,9 +12,9 @@ def view(request, *args, **kwargs):
 
 
 urlpatterns = [
-    url(r'^foo/$', view, name='view'),
-    url(r'^foo/(?P<foo>\w+)/$', view, name='view'),
-    url(r'^foo/(\d+)/$', view, name='view'),
+    re_path(r'^foo/$', view, name='view'),
+    re_path(r'^foo/(?P<foo>\w+)/$', view, name='view'),
+    re_path(r'^foo/(\d+)/$', view, name='view'),
 ]
 
 

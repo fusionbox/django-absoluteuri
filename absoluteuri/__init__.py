@@ -1,9 +1,14 @@
-import pkg_resources
-
 from django import urls
 from django.conf import settings
 
-__version__ = pkg_resources.get_distribution('django-absoluteuri').version
+try:
+    from importlib.metadata import version
+
+    __version__ = version('django-absoluteuri')
+except ImportError:
+    import pkg_resources
+
+    __version__ = pkg_resources.get_distribution('django-absoluteuri').version
 
 
 def build_absolute_uri(path):

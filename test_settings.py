@@ -1,5 +1,5 @@
 # We just put it here to get the checks to shut up
-MIDDLEWARE_CLASSES = []
+MIDDLEWARE = []
 
 INSTALLED_APPS = (
     'django.contrib.sites',
@@ -13,6 +13,8 @@ DATABASES = {
 }
 
 SITE_ID = 1
+
+SECRET_KEY = 'test-secret-key'
 
 ROOT_URLCONF = 'absoluteuri.tests'
 

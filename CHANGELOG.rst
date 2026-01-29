@@ -3,10 +3,13 @@
 Changelog
 =========
 
-1.3.1 (unreleased)
+2.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Drop support for Python < 3.8
+- Drop support for Django < 4.2.
+- Add support for Django 4.2, 5.0, 5.1, 5.2, and 6.0.
+- Add support for Python 3.10, 3.11, 3.12, 3.13, and 3.14.
 
 
 1.3.0 (2018-09-04)
