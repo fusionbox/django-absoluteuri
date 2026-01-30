@@ -1,15 +1,16 @@
 django-absoluteuri
 ==================
 
-.. image:: https://travis-ci.org/fusionbox/django-absoluteuri.png?branch=master
-    :target: https://travis-ci.org/fusionbox/django-absoluteuri
+.. image:: https://github.com/fusionbox/django-absoluteuri/actions/workflows/tests.yml/badge.svg
+   :target: https://github.com/fusionbox/django-absoluteuri/actions/workflows/tests.yml
+   :alt: Tests
 
 Absolute URI functions and template tags for Django.
 
 
 Why
 ---
-
+'<label for="id_pizza_set">Pizza selection:</label>'
 There are times when you need to output an absolute URL (for example, inside an
 email), but you don't always have access to the request. These utilities use
 the Sites Framework if available in order to create absolute URIs.
