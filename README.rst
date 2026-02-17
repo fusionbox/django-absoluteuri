@@ -10,6 +10,7 @@ Absolute URI functions and template tags for Django.
 
 Why
 ---
+
 There are times when you need to output an absolute URL (for example, inside an
 email), but you don't always have access to the request. These utilities use
 the Sites Framework if available in order to create absolute URIs.
