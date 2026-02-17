@@ -13,7 +13,7 @@ changelog = read('CHANGELOG.rst')
 
 setup(
     name='django-absoluteuri',
-    version='1.3.1.dev0',
+    version='2.0.0',
     description=__doc__,
     long_description=readme + '\n\n' + changelog,
     author='Fusionbox, Inc.',
@@ -21,11 +21,7 @@ setup(
     url='https://github.com/fusionbox/django-absoluteuri',
     packages=[package for package in find_packages() if package.startswith('absoluteuri')],
     install_requires=[
-        'Django>=1.11',
-    ],
-    test_suite='setuptest.setuptest.SetupTestSuite',
-    tests_require=[
-        'django-setuptest',
+        'Django>=4.2',
     ],
     license="Apache 2.0",
     zip_safe=True,
@@ -36,11 +32,13 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+        'Programming Language :: Python :: 3.13',
+        'Programming Language :: Python :: 3.14',
     ],
 )

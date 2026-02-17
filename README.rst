@@ -1,8 +1,9 @@
 django-absoluteuri
 ==================
 
-.. image:: https://travis-ci.org/fusionbox/django-absoluteuri.png?branch=master
-    :target: https://travis-ci.org/fusionbox/django-absoluteuri
+.. image:: https://github.com/fusionbox/django-absoluteuri/actions/workflows/tests.yml/badge.svg
+   :target: https://github.com/fusionbox/django-absoluteuri/actions/workflows/tests.yml
+   :alt: Tests
 
 Absolute URI functions and template tags for Django.
 
