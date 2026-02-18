@@ -3,7 +3,7 @@
 Changelog
 =========
 
-2.0.0 (unreleased)
+2.0.0 (2026-02-18)
 ------------------
 
 - Drop support for Python < 3.8
